@@ -10,6 +10,14 @@ public class ParkingSpot {
     public boolean canPark(Vehicle v) {
         return curVehicle == null && v.getType() == this.type;
     }
+    
+    public boolean isEmpty() {
+    	return this.curVehicle == null;
+    }
+    
+    public String getVin() {
+    	return this.curVehicle.vin;
+    }
 
     public synchronized boolean goPark(Vehicle v) {
         if (canPark(v)) {
@@ -26,6 +34,6 @@ public class ParkingSpot {
             curVehicle = null;
             return v;
         }
-        return null;
+        throw new IllegalArgumentException("No vehicle is parked in this spot.");
     }
 }

@@ -5,4 +5,8 @@ abstract class Vehicle {
     public CarType getType() {
         return this.type;
     }
+    
+//    public String getVin() {
+//    	return this.vin;
+//    }
 }
