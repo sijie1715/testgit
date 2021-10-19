@@ -46,6 +46,14 @@ public class ParkingLot {
     	return loc;
     }
     
+    public void leavePark(String vin) {
+    	if (locatorMap.containsKey(vin)) {
+    		levels[locatorMap.get(vin)].leavePark(vin);
+    	} else {
+    		throw new IllegalArgumentException("Vehicle not parked in this parking lot. ");
+    	}
+    }
+    
     public void printMap() {
     	System.out.println("===== printing parking lot =====");
     	int height = this.levels.length;

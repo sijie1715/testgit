@@ -54,6 +54,14 @@ public class Level {
     	return -1;
     }
     
+    public boolean leavePark(String vin) {
+    	if (locatorMap.containsKey(vin)) {
+    		spots[locatorMap.get(vin)].leavePark();
+    		return true;
+    	}
+    	throw new IllegalArgumentException("Vehicle not parked on this level.");
+    }
+    
     public void printLevel() {
     	for (int i = 0; i < spots.length; i++) {
     		System.out.print(spots[i].isEmpty() ? "[    ]" : "[" + spots[i].getVin() + "]");

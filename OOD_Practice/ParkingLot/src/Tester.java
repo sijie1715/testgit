@@ -23,5 +23,7 @@ public class Tester {
     	pk1.printMap();
     	int[] loc = pk1.lookUp("m003");
     	System.out.println("position: " + loc[0] + ", " + loc[1]);
+    	pk1.leavePark("m003");
+    	pk1.printMap();
     }
 }
