@@ -1,4 +1,4 @@
-public class Tester {
+public class ParkingLotTester {
     public static void main(String[] args) {
 
     	int numOfLevel = 3;
@@ -21,9 +21,12 @@ public class Tester {
     	pk1.goPark(new Motor("m002"));
     	pk1.goPark(new Motor("m003"));
     	pk1.printMap();
+    	// print motor3 location
     	int[] loc = pk1.lookUp("m003");
-    	System.out.println("position: " + loc[0] + ", " + loc[1]);
-    	pk1.leavePark("m003");
+    	System.out.println("m003 position: " + loc[0] + ", " + loc[1]);
+    	
+    	// motor2 leave parking lot
+    	pk1.leavePark("m002");
     	pk1.printMap();
     }
 }
