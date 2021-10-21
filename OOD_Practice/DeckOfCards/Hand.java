@@ -8,6 +8,15 @@ public class Hand {
 	public Hand(List<Card> hand) {
 		this.hand = hand;
 	}
+	
+	public List<Card> getHand() {
+		return hand;
+	}
+	
+	public void add(List<Card> newCards) {
+		hand.addAll(newCards);
+	}
+	
 	public void print() {
 		System.out.println(">>>> Showing hand: ");
 		if (hand.isEmpty()) {

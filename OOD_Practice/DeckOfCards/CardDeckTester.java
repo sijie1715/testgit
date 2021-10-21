@@ -10,6 +10,9 @@ public class CardDeckTester {
 		
 		deck1.deal(53);
 		deck1.peek(1);
+		
+		deck1.putBack(hand1.getHand());
+		deck1.peek(5);
 	}
 	
 }

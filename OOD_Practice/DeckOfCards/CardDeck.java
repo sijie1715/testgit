@@ -26,6 +26,7 @@ public class CardDeck {
 			deckLeft = deck.subList(n, deck.size());
 		}
 		deck = deckLeft;
+		System.out.println("* Dealt " + Math.min(hand.size(), n) + "cards. ");
 		return hand;
 	}
 	
